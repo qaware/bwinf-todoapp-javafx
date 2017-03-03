@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+          prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111"
+          fx:controller="de.qaware.bwinf.todoapp.controller.MainController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints fillHeight="false" maxHeight="193.0" minHeight="40.0" vgrow="NEVER"/>
+        <RowConstraints minHeight="10.0" valignment="TOP" vgrow="ALWAYS"/>
+    </rowConstraints>
+    <children>
+        <HBox GridPane.columnSpan="3">
+            <children>
+                <Button mnemonicParsing="false" onAction="#onCreateNewClicked" text="Create new"/>
+                <TextField fx:id="searchTextbox" onAction="#onSearch" promptText="Search" HBox.hgrow="ALWAYS">
+                    <HBox.margin>
+                        <Insets left="5.0"/>
+                    </HBox.margin>
+                </TextField>
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </padding>
+        </HBox>
+        <TitledPane animated="false" collapsible="false" maxHeight="1.7976931348623157E308" text="To-Do"
+                    GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+            <content>
+                <ScrollPane fitToHeight="true">
+                    <content>
+                        <VBox fx:id="todoContainer"/>
+                    </content>
+                </ScrollPane>
+            </content>
+        </TitledPane>
+        <TitledPane animated="false" collapsible="false" maxHeight="1.7976931348623157E308" text="In Progress"
+                    GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+            <content>
+                <ScrollPane fitToHeight="true">
+                    <content>
+                        <VBox fx:id="inProgressContainer"/>
+                    </content>
+                </ScrollPane>
+            </content>
+        </TitledPane>
+        <TitledPane animated="false" collapsible="false" maxHeight="1.7976931348623157E308" text="Done"
+                    GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+            <content>
+                <ScrollPane fitToHeight="true">
+                    <content>
+                        <VBox fx:id="doneContainer"/>
+                    </content>
+                </ScrollPane>
+            </content>
+        </TitledPane>
+    </children>
+</GridPane>

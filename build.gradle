@@ -7,15 +7,17 @@ apply plugin: 'application'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-mainClassName = 'de.qaware.bwinf.todoapp.Main'
+mainClassName = 'de.qaware.bwinf.todoapp.TodoApp'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
+    compile group: 'com.airhacks', name: 'afterburner.fx', version: '1.7.0'
+    compile group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '3.4'
+    gradleVersion = '3.3'
 }
