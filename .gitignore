@@ -3,10 +3,13 @@
 classes/
 out/
 
+# Netbeans
+.nb-gradle/
+
 # Gradle
 .gradle/
 build/
 
 # Application data
 todo-data.csv
-/.nb-gradle/
+
