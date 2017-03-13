@@ -9,3 +9,4 @@ build/
 
 # Application data
 todo-data.csv
+/.nb-gradle/
